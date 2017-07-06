@@ -14,77 +14,49 @@ class HomeCell: UICollectionViewCell {
     
     
     
+    // i wanna put homeDate && homeName under homeImage
     
+   
+    var homeImage:UIImageView = {
+        
+       let img = UIImageView()
+        
+        img.translatesAutoresizingMaskIntoConstraints = false
+        
+        return img
+        
+    }()
     
-    
-    
-    
-    
-    
-    
-    
-    
-    // i wanna put homeDate && homeName ander homeImage
-    
-    
-    
-    @IBOutlet weak var homeImage: UIImageView!
-    
-    @IBOutlet weak var homeDate: UILabel!
-    @IBOutlet weak var homeName: UILabel!
-    @IBOutlet weak var imageBottom: NSLayoutConstraint!
-    @IBOutlet weak var imageWidth: NSLayoutConstraint!
-    @IBOutlet weak var imageLeading: NSLayoutConstraint!
     override func awakeFromNib() {
         super.awakeFromNib()
 
-
+   self.addSubview(homeImage)
         
-//        
-//        NotificationCenter.default.addObserver(forName: NSNotification.Name("g"), object: nil, queue: nil) { (Notification) in
-//            
-//       
-//            self.setupGridLayoutConstraints()
-//            
-//        }
-//        
-//        
-//        NotificationCenter.default.addObserver(forName: NSNotification.Name("l"), object: nil, queue: nil) { (Notification) in
-//            
-//          
-//            self.setupListLayoutConstraints()
-//            
-//        }
-//
     }
     
 
-    
-    override func draw(_ rect: CGRect) {
-        super.draw(rect)
-        
-      
-        
-    }
+   
     
 
     
     func setupGridLayoutConstraints() {
 
         
-
-        imageWidth.constant = self.frame.size.width
+        homeImage.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
+        homeImage.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
+        homeImage.heightAnchor.constraint(equalToConstant: 100).isActive = true
+        homeImage.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
         
-        imageWidth.isActive = true
         
 
     }
     
     func setupListLayoutConstraints() {
 
-   imageWidth.constant = 100
-   imageWidth.isActive = true
-
+        homeImage.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
+        homeImage.widthAnchor.constraint(equalToConstant: 100).isActive = true
+        homeImage.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        homeImage.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true 
         
     }
     
