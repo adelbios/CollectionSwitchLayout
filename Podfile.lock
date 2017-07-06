@@ -1,0 +1,12 @@
+PODS:
+  - DisplaySwitcher (1.0.1)
+
+DEPENDENCIES:
+  - DisplaySwitcher
+
+SPEC CHECKSUMS:
+  DisplaySwitcher: 5f725284c28cdf22ea7ba2eee8e8f7e7cb9cdf87
+
+PODFILE CHECKSUM: 4b7aa788256e74b6b4dbbfb974e83ee20be81050
+
+COCOAPODS: 1.2.0
